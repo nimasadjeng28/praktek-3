@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>Kalkulator Sederhana</title>
+    </head>
+    <script language="Javascript">
+        function hitung(pilihan)
+        {
+            var val1=document.getElementById('angka1').value;
+            var val2=document.getElementById('angka2').value;
+            val1 = parseInt(val1)
+            val2 = parseInt(val2)
+            if (pilihan=='+'){
+                document.getElementById('hasil').value = val1 + val2;
+        }
+            else if(pilihan == '-'){
+                document.getElementById('hasil').value = val1 - val2;
+        }
+            else if(pilihan == 'x'){
+            document.getElementById('hasil').value = val1 * val2;
+        }
+            else {
+                document.getElementById('hasil').value = val1 / val2;
+        }
+        }
+    </script>
+    <body>
+        Angka ke 1 : <input name="val1" type="text" value="" id="angka1">
+        Angka ke 2 : <input name="val2" type="text" value="" id="angka2">
+        <br><br>
+        <input name="hitung" type="button" value="+" onclick="hitung(this.value)">
+        <input name="hitung" type="button" value="-" onclick="hitung(this.value)">
+        <input name="hitung" type="button" value="x" onclick="hitung(this.value)">
+        <input name="hitung" type="button" value=":" onclick="hitung(this.value)">
+        <br><br>
+        Hasil : <input name="hasil" type="text" value="0" id="hasil">
+    </body>
+</html>
